@@ -1,0 +1,31 @@
+/* 文章卡片透明 */
+#recent-posts .recent-post-item {
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* 侧边栏卡片透明 */
+#aside-content .card-widget {
+  background: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* 确保文本对比度 */
+.post-content, .card-widget, #nav a, #footer {
+  color: #333 !important; /* 浅色模式文本颜色 */
+}
+
+[data-theme="dark"] .post-content,
+[data-theme="dark"] .card-widget,
+[data-theme="dark"] #nav a,
+[data-theme="dark"] #footer {
+  color: #ddd !important; /* 夜间模式文本颜色 */
+}
+
+/* 夜间模式调整 */
+[data-theme="dark"] #page,
+[data-theme="dark"] #web_info,
+[data-theme="dark"] #nav,
+[data-theme="dark"] #recent-posts .recent-post-item,
+[data-theme="dark"] #aside-content .card-widget,
+[data-theme="dark"] #footer {
+  background: rgba(0, 0, 0, 0.7) !important; /* 夜间模式黑色背景，70%透明度 */
+}
