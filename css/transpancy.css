@@ -1,0 +1,29 @@
+/* 文章页背景 */
+.layout_post>#post {
+    background: rgba(255, 255, 255,0.7);
+}
+
+/* 所有页面背景 */
+#aside_content .card-widget,
+#recent-posts>.recent-post-item,
+.layout_page>div:first-child:not(.recent-posts),
+.layout_post>#page,
+.layout_post>#post,
+.read-mode .layout_post>#post {
+    background: rgba(255, 255, 255,0.7);
+}
+
+/*侧边卡片的透明度 */
+:root {
+    --card-bg: rgba(255, 255, 255,0.7);
+}
+
+/* 夜间模式调整 */
+[data-theme="dark"] #page,
+[data-theme="dark"] #web_info,
+[data-theme="dark"] #nav,
+[data-theme="dark"] #recent-posts .recent-post-item,
+[data-theme="dark"] #aside-content .card-widget,
+[data-theme="dark"] #footer {
+  background: rgba(0, 0, 0, 0.7) !important; /* 夜间模式黑色背景，70%透明度 */
+}
