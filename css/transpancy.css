@@ -1,29 +1,70 @@
-/* 文章页背景 */
+/*浅色模式*/
+/*文章页背景*/
 .layout_post>#post {
-    background: rgba(255, 255, 255,0.7);
+    background: rgba(255, 255, 255, .5);   /* 原0.7 → 0.5 */
 }
 
-/* 所有页面背景 */
+/*所有页面背景*/
 #aside_content .card-widget,
 #recent-posts>.recent-post-item,
 .layout_page>div:first-child:not(.recent-posts),
 .layout_post>#page,
 .layout_post>#post,
 .read-mode .layout_post>#post {
-    background: rgba(255, 255, 255,0.7);
+    background: rgba(255, 255, 255, .7);   /* 原0.9 → 0.7 */
 }
 
-/*侧边卡片的透明度 */
+/*侧边卡片*/
 :root {
-    --card-bg: rgba(255, 255, 255,0.7);
+    --card-bg: rgba(255, 255, 255, .7);
 }
 
-/* 夜间模式调整 */
-[data-theme="dark"] #page,
-[data-theme="dark"] #web_info,
-[data-theme="dark"] #nav,
-[data-theme="dark"] #recent-posts .recent-post-item,
-[data-theme="dark"] #aside-content .card-widget,
+/*页脚*/
+#footer {
+    background: rgba(255, 255, 255, .05);  /* 原0.1 → 0.05，几乎透明 */
+}
+
+/*深色模式*/
+[data-theme="dark"] .layout_post>#post {
+    background: rgba(0, 0, 0, .4);         /* 原0.6 → 0.4 */
+}
+
+[data-theme="dark"] #aside_content .card-widget,
+[data-theme="dark"] #recent-posts>.recent-post-item,
+[data-theme="dark"] .layout_page>div:first-child:not(.recent-posts),
+[data-theme="dark"] .layout_post>#page,
+[data-theme="dark"] .layout_post>#post,
+[data-theme="dark"] .read-mode .layout_post>#post {
+    background: rgba(18, 18, 18, .65);     /* 原0.85 → 0.65 */
+}
+
+[data-theme="dark"] {
+    --card-bg: rgba(18, 18, 18, .65);
+}
+
 [data-theme="dark"] #footer {
-  background: rgba(0, 0, 0, 0.7) !important; /* 夜间模式黑色背景，70%透明度 */
+    background: rgba(0, 0, 0, .1);         /* 原0.2 → 0.1 */
+}
+
+/*毛玻璃质感*/
+.layout_post>#post,
+#aside_content .card-widget,
+#recent-posts>.recent-post-item,
+.layout_page>div:first-child:not(.recent-posts),
+.layout_post>#page,
+#footer {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, .1);
+}
+
+[data-theme="dark"] .layout_post>#post,
+[data-theme="dark"] #aside_content .card-widget,
+[data-theme="dark"] #recent-posts>.recent-post-item,
+[data-theme="dark"] .layout_page>div:first-child:not(.recent-posts),
+[data-theme="dark"] .layout_post>#page,
+[data-theme="dark"] #footer {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, .05);
 }
